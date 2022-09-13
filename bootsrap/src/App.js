@@ -7,7 +7,7 @@ import Alert from "./Components/Alert";
 
 
 function App() {
-  const  [mode, setMode] = useState('dark');
+  const  [mode, setMode] = useState('light');
   const [alert, setAlert] = useState(null);
 
   const showAlert = (massage, type)=>{
@@ -37,9 +37,9 @@ function App() {
     <>
       <Navbar tittle="DEVTRONICS" mode={mode} toggleMode={toggleMode}/>
       <Alert alert={alert}/>
+      {/* <About  mode={mode} /> */}
       <div className="container my-3">
       <TextForm showAlert={showAlert} heading="Type Here Whatever You Like" mode={mode}/>
-      {/* <About/> */}
       </div>
     </>
   );
